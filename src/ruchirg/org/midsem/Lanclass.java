@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Lanclass implements LanInterface{
 	public String Lan() {
-		try {
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\Ruchir\\Downloads\\geckodriver-v0.27.0-win64\\geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
@@ -44,12 +43,7 @@ public class Lanclass implements LanInterface{
 		jse.executeScript("alert('Checkout was Successfull')");
 		String ac=driver.switchTo().alert().getText();
 		return ac;
-		 } 
-		catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 return null;
+		 
 	}
 
 }
